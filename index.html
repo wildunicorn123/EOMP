@@ -9,14 +9,14 @@
 </head>
 <body>
     <header>
-       <!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Navbar-->
+<nav class="navbar navbar-expand navbar-light bg-white">
     <div class="container-fluid justify-content-between">
-      <!-- Left elements -->
-      <div class="d-flex">
+        <!-- Left elements -->
+    <div class="d-flex">
         <!-- Brand -->
         <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-
+            <img src="https://i.postimg.cc/FzzJJnxs/abcakes-logo.png" alt="logo" class="logo">
         </a>
     </div>
         <!-- Left elements -->
@@ -24,16 +24,16 @@
         <!-- Center elements -->
         <ul class="navbar-nav flex-row d-none d-md-flex">
         <li class="nav-item me-3 me-lg-1 active">
-            <a class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="index.html">HOME</a>
         </li>
         <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link" href="#">SHOP </a>
+            <a class="nav-link" href="./sources/pages/shop.html">SHOP </a>
         </li>
         <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link" href="#">CONTACT </a>
+            <a class="nav-link" href="./sources/pages/contact.html">CONTACT </a>
         </li>
         <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link" href="#">ABOUT US</a>
+            <a class="nav-link" href="./sources/pages/about.html">ABOUT US</a>
         </li>
         </ul>
         <!-- Center elements -->
@@ -41,12 +41,13 @@
         <!-- Right elements -->
         <ul class="navbar-nav flex-row">
         <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="./sources/pages/admin.html">
             <span><i class="fa fa-user-o fa-lg"></i></span>
             </a>
         </li>
         <li class="nav-item me-3 me-lg-1">
             <a class="nav-link" href="#">
+                <!--still a link missing-->
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
             </a>
         </li>
@@ -54,6 +55,44 @@
         <!-- Right elements -->
     </div>
     </nav>
+    <!--main-->
+    <main>
+        <div class="hero" >
+            <div class="text1">
+                <p>Whatever you can't make, we will bake.</p>
+                <button><a href="./sources/pages/shop.html">SEE BAKERY</a></button>
+            </div>
+        </div>
+            <div class="container my-5 gap-3" style="position:relative;">
+                <section class="row gap-5">
+                        <div id="product1" class="col d-flex flex-column align-items-center gap-3 p-4">
+                            <a><i class="fa fa-mobile fa-4x" aria-hidden="true"></i></a>
+                            <h5 class="text-black">Easy to Access</h5>
+                            <p class="text-black text-center px-3">
+                                Order online by using your cellphone
+                                </p>
+                                <a class="custom-btn" href="./sources/pages/shop.html">View All</a>
+                        </div>
+                        <div id="product2" class="col d-flex flex-column align-items-center gap-3 p-4">
+                            <a><i class="fa fa-clock-o fa-4x" aria-hidden="true"></i></a>
+                            <h5 class="text-black">By When</h5>
+                            <p class="text-black text-center px-3">
+                                Let us know by when you need it.
+                                </p>
+                                <a class="custom-btn" href="./sources/pages/shop.html">View All</a>
+                        </div>
+                        <div id="product3" class="col d-flex flex-column align-items-center gap-3 p-4">
+                            <a><i class="fa fa-home fa-4x" aria-hidden="true"></i></a>
+                            <h5 class="text-black">Convenient</h5>
+
+                            <p class="text-black text-center px-3">
+                                Collect in-store or have it Delivered to your Home.
+                                </p>
+                                <a class="custom-btn" href="./sources/pages/shop.html">View All</a>
+
+                        </div>
+                        </section>
+    </main>
     </header>
     <script src="https://kit.fontawesome.com/850ca6a355.js" crossorigin="anonymous"></script>
 </body>
