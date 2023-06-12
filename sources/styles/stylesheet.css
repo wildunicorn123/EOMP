@@ -98,3 +98,27 @@ header{
 footer{
     font-family: 'Buda', cursive;
 }
+.cupcake{
+    background: url(https://i.postimg.cc/02Q4T7JB/cupcake.jpg) no-repeat center center/cover;
+}
+.buttn{
+    background-color:white;
+    padding:10px 10px 10px 10px;
+    border-radius: 9px;
+    color:#c1121f;
+    font-family: 'buda',cursive;
+}
+.container{
+    padding:200px 200px 200px 200px;
+    color:white;
+    font-family:'buda',cursive;
+    margin: 10px 10px 10px 10px;
+}
+input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 0;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #f8bcbc, -2px -2px -2px ;
+}
