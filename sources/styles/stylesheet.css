@@ -66,7 +66,7 @@ a{
     font-family: 'Buda', cursive;
 }
 i{
-    color:#c1121f;
+    color:#c1121f!important;
 }
 .custom-btn:hover {
     background-color:rgb(255, 255, 255);
@@ -155,4 +155,11 @@ nav > ul >li:hover, :focus{
 }
 nav{
     padding-bottom: 0 !important;
+}
+.checks{
+    padding: 4px;
+    background-color: white;
+    font-family: 'buda',cursive;
+    border:2px solid #c1121f;
+    border-radius: 5px;
 }

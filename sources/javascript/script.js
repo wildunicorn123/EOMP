@@ -142,13 +142,14 @@ let cakes = JSON.parse(localStorage.getItem("cakes")) || [
         category: "fancies",
     },
 ];
+localStorage.setItem("cakes", JSON.stringify(cakes));
 window.onload = function (e) {
     let cakeItems = [];
     cakes.forEach((cake) => {
     if (cake.category == "best-sellers") {
         cakeItems +=
     `
-            <div class="card">
+            <div class="col d-flex flex-column align-items-center gap-4 p-4">
             <img src="` +
         cake.image +
         `" alt="" width="100px" height="100px">
@@ -159,7 +160,7 @@ window.onload = function (e) {
                 <p> R ` +
         cake.price +
         `</p>
-            <button class="btn" onclick="add()" >Add to cart</button>
+            <button class="btn" onclick="add()" >Add to cart<i class="fa fa-shopping-cart fa-sm"></i></button>
             </div>
             </div>
             `;
@@ -171,7 +172,7 @@ window.onload = function (e) {
     if (cake.category == "weddings") {
         cakeItems +=
         `
-        <div class="card">
+        <div class="col d-flex flex-column align-items-center gap-4 p-4">
             <img src="` +
         cake.image +
         `" alt="" width="100px" height="100px">
@@ -182,7 +183,7 @@ window.onload = function (e) {
         <p> R ` +
         cake.price +
         `</p>
-            <button class="btn" onclick="add()">Add to cart</button>
+            <button class="btn" onclick="add()">Add to cart<i class="fa fa-shopping-cart fa-sm"></i></button>
             </div>
         </div>`;
     }
@@ -193,7 +194,7 @@ window.onload = function (e) {
     if (cake.category == "birthdays") {
         cakeItems +=
         `
-        <div class="card">
+        <div class="col d-flex flex-column align-items-center gap-4 p-4">
             <img src="` +
         cake.image +
         `" alt="" width="100px" height="100px">
@@ -204,7 +205,7 @@ window.onload = function (e) {
             <p> R ` +
         cake.price +
         `</p>
-            <button class="btn" onclick="add()">Add to cart</button>
+            <button class="btn" onclick="add()">Add to cart<i class="fa fa-shopping-cart fa-sm"></i></button>
             </div>
         </div>`;
     }
@@ -215,7 +216,7 @@ window.onload = function (e) {
     if (cake.category == "fancies") {
         cakeItems +=
         `
-        <div class="card">
+        <div class="col d-flex flex-column align-items-center gap-4 p-4">
             <img src="` +
         cake.image +
         `" alt="" width="100px" height="100px">
@@ -226,10 +227,59 @@ window.onload = function (e) {
             <p> R ` +
         cake.price +
         `</p>
-            <button class="btn" onclick="add()" >Add to cart</button>
+            <button class="btn" onclick="add()" >Add to cart<i class="fa fa-shopping-cart fa-sm"></i></button>
             </div>
         </div>`;
     }
     document.querySelector("#lekker").innerHTML = cakeItems;
     });
 };
+
+const cakestuff = [...new Set(cakes.map((items)=>
+    {return items}))]
+    let i=0;
+
+let cart = [];
+
+
+function add(a){
+    cart.push({...cakestuff[a]});
+    display();
+}
+
+function display(){
+    let j = 0;
+    if(cart.length==0){
+        document.getElementById('canvasBod').innerHTML = "It seems like your cart is empty😅";
+    }
+    else{
+        document.getElementById("canvasBod").innerHTML = cart.map((items)=> 
+        {
+            let {image, name, price} = items;
+            return(
+                `<div class="citems">
+                <div class="image">
+                <img class="imaages" src="${image}">
+                </div>
+                <p style="font-size:12px;">${name}</p>
+                <h2 style="font-size:15px;">R ${price}.00</h2>
+                <i class="fa-solid fa-trash" onclick="del()"></i></div>`
+            );
+        }).join('');
+    }
+};
+
+function del(){
+
+}
+function checkOut(){
+    document.getElementById("canvasBod").innerHTML = "";
+
+    alert("You have placed your order with ABCAKES");
+};
+
+function birth(event){
+    let newCakes = cakes.filter(x => {
+        return document.getElementById("dinges").innerHTML <= event.target.value;
+    })
+}
