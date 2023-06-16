@@ -7,6 +7,26 @@
 .btn{
     color:#c1121f!important;
 }
+.table{
+    width:100%;
+}
+.agter{
+    margin-bottom:15px;
+    margin-left:10px;
+}
+.agter > button {
+    background-color:white;
+    border-radius:2px;
+    border-color:white;
+}
+input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 0;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #f8bcbc, -2px -2px -2px ;
+}
 a{
     text-decoration:none !important;
     font-family: 'Buda', cursive;

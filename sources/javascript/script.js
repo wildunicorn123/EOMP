@@ -233,6 +233,9 @@ window.onload = function (e) {
     }
     document.querySelector("#lekker").innerHTML = cakeItems;
     });
+    function del(){
+        cakes.pop();
+    }
 };
 
 const cakestuff = [...new Set(cakes.map((items)=>
@@ -269,17 +272,8 @@ function display(){
     }
 };
 
-function del(){
-
-}
 function checkOut(){
     document.getElementById("canvasBod").innerHTML = "";
 
     alert("You have placed your order with ABCAKES");
 };
-
-function birth(event){
-    let newCakes = cakes.filter(x => {
-        return document.getElementById("dinges").innerHTML <= event.target.value;
-    })
-}
